@@ -1,0 +1,126 @@
+# type       pos.x	  pos.y		pos.z	scale.x scale.y scale.z  rot.x rot.y rot.z		anim.x  anim.y  anim.z	amplitude	animSpeed
+
+# --- Murs cloture ---
+# -- Mur hauts
+Wall         27.0     -56.5     -90       40      15       1         0     90      0  
+Wall         43.0     -56.5     -90       40      15       1         0     90      0
+Wall         35.0     -56.5     -130      08      15       1         0     00      0 
+
+
+#--- Murs bas
+Wall         27.0     -61.5     -40       40.0      10       1         0     90      0  
+Wall         43.0     -61.5     -40       40.0      10       1         0     90      0 
+Wall         23.5     -61.5     -00       03.5      10       1         0     00      0 
+Wall         61.5     -61.5     -00       18.5      10       1         0     00      0
+
+Wall         80.0     -61.5     030       30.0      10       1         0     90      0
+Wall         20.0     -61.5     040       40.0      10       1         0     90      0
+
+Wall         120.0     -61.5    060       40.0      10       1         0     00      0
+Wall          90.0     -61.5    080       70.0      10       1         0     00      0
+
+Wall         160.0     -61.5    070       10.0      10       1         0     90      0
+
+# --- Murs Toiture ---
+
+Wall         35.0     -41.5     -90      08      40       1         90     00      0 
+Wall         35.0     -46.5     -50      08      05       1         00     00      0
+
+Wall         35.0     -51.5     -25      08      25       1         90     00      0 
+
+Wall         50     -51.5      40      30      40       1         90     00      0 
+
+Wall         120.0     -51.5    070       40.0      10       1         90     00      0
+
+
+
+
+
+Floor        35       -60.5     -90       08      1        40        0     0       0
+Floor        35       -70.5     -60       08      1        70        0     0       0
+
+#Wall         35.0     -68.5      10       10      03       1         00     00      0
+#Wall         35.0     -65.5      20       10      10       1         90     00      0
+
+# Premier étage (premier couloir après premier swap green)
+#Wall         50.0     -65.5      20       30      10       1         90     00      0
+#
+#Wall         62.0     -60.5      10       18      5        1         00     00      0
+#Wall         50.0     -60.5      30       30      5        1         00     00      0
+#
+#Wall         50.0     -65.5      20       30      10       1         90     00      0
+#
+## fin couloir escalier
+#Wall         80.0     -63.5       20       10      02       1         00     90      0
+
+# --- Plafond (Ceiling) sur toute la zone de jeu ---
+
+
+
+# --- Cube (Animated / Simple) sur toute la zone je jeu
+
+# Tutorial cube (cube at player spawn)
+Cube         30      -60    -125       0.5       0.5       0.5         0     0      0       0      0      0     0.05      1         color=blue
+CubeTP       40      -60    -125       0.5       0.5       0.5         0     0      0       0      0      0     0.05      1         color=blue
+
+# First door cube
+Cube		 35      -66    -105       0.5       0.5       0.5         0     0      0       0      1      0     0.05      7         color=green
+#Cube		 30      -70     -00       0.5       0.5       0.5         0     0      0       0      0      0     0.05      5         color=blue
+
+# First TP cube
+CubeTP       28      -70     20       0.5       0.5       0.5         0     0      0       0      0      0     0.05      1         color=green
+
+
+# --- Door 
+Door         35      -70.5   -50      0.5       4       7         0     90      0       0      0      0     0.05      1		color=blue
+Door         35      -70.5   -10      0.5       4       7         0     90      0       0      0      0     0.05      1		color=green
+#Door         50      -65.0    20      0.5       4       8         0     0       0       0      0      0     0.05      1		color=blue
+
+
+# EXTENSION DU NIVEAU - PARTIE 2
+# type       pos.x	  pos.y		pos.z	scale.x scale.y scale.z  rot.x rot.y rot.z		anim.x  anim.y  anim.z	amplitude	animSpeed
+
+# --- Continuation couloir principal (après la porte bleue à z=20) ------ Section RED - Premier couloir horizontal ---
+Floor        50       -70.5     40       30      1        40        0     0       0
+Wall         30       -65.5     40       10      6        1         0     0       0
+Wall         64       -65.5     40       14      6        1         0     0       0
+
+Wall         65.0     -68.5      10       15      03       1         00     00      0
+
+# Cube rouge pour passer la porte rouge
+Cube         30       -70      25       0.5     0.5      0.5       0     0      0       0      0      0     0.05      4         color=orange
+
+# Porte rouge au bout du couloir
+Door         45       -70.5    40       0.5       4        7         0     90     0       0      0      0     0.05      1         color=orange
+
+
+# --- Petite Salle porte jaune  ---
+Wall         35       -65.5     43       03      6        1         0     90       0
+Wall         35       -65.5     58       03      6        1         0     90       0
+Wall         30       -65.5     61       10      6        1         0     0       0
+
+# --- Cube violet dans la petite salle ---
+Cube         34       -71       41       0.5     0.5      0.5       0     0      0       0      0      0     0.05      5         color=purple	
+
+CubeTP       75       -71       48       0.5     0.5      0.5       0     0      0       0      0      1     0.03      1         color=purple
+
+
+# Cubes jaunes dans le tournant
+Cube         34       -66      70       0.5     0.5      0.5        0     0      0       0      1      0     0.05      5         color=yellow
+
+
+# Porte jaune pour accéder à la salle jaune
+Door         35       -70.5     50      0.5       5        5         0     0      0       0      0      0     0.05      1         color=yellow
+
+# --- Couloir vertical vers le haut ---
+Floor        120      -70.5     70       40      1        10        0     0       0
+
+
+# --- Section PURPLE - Long couloir droit ---
+
+# Porte violette au bout du couloir
+Door          81      -70.5    70       0.5       4        8         0     0      0       0      0      0     0.05      1         color=purple
+
+
+
+CubeWin       150      -70.5    70       0.5     0.5      0.5         0     0      0       0      0      0     0.05      1         color=cyan

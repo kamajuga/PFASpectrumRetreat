@@ -1,0 +1,29 @@
+# Dependencies
+
+get_filename_component(DEPENDENCIES_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+#set(DEPENDENCIES_NAME Depecencies) #Local variable only
+
+file(GLOB_RECURSE PROJECT_FILES
+    ${CMAKE_CURRENT_SOURCE_DIR}/Header/*.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/Source/*.cpp
+)
+list(FILTER PROJECT_FILES EXCLUDE REGEX ${CMAKE_CURRENT_BINARY_DIR})
+
+add_library(${DEPENDENCIES_NAME})
+
+add_library(glfw3 STATIC IMPORTED GLOBAL)
+set_target_properties(glfw3 PROPERTIES
+    IMPORTED_LOCATION "${CMAKE_CURRENT_SOURCE_DIR}/lib/*.lib"
+    INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/Header"
+)
+
+target_sources(${DEPENDENCIES_NAME} PRIVATE ${PROJECT_FILES})
+
+target_include_directories(${DEPENDENCIES_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Header)
+
+set(DEPENDENCIES_NAME ${DEPENDENCIES_NAME} PARENT_SCOPE) #outer scope variable only
+
+set(DEPENDENCIES_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Header PARENT_SCOPE)
+#This command sets the LIB_INCLUDE_DIR variable to the path of the 'include' directory
+
+
